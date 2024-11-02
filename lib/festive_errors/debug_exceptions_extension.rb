@@ -11,17 +11,10 @@ module FestiveErrors
     {
       christmas: Date.new(year, 12, 1)..Date.new(year, 12, 30),
       halloween: Date.new(year, 10, 1)..Date.new(year, 10, 31),
-      valentines: valentines_range(year),
+      valentines: (Date.new(year, 2, 14) - 7)..Date.new(year, 2, 14),
       thanksgiving: Date.new(year, 11, 1)..Date.new(year, 11, 30),
       newyears: Date.new(year, 12, 31)..Date.new(year + 1, 1, 1)
     }
-  end
-
-  def self.valentines_range(year)
-    valentines_day = Date.new(year, 2, 14)
-    start_date = valentines_day - 7 # 1 week before
-    end_date = valentines_day
-    start_date..end_date
   end
 
   module DebugExceptionsExtension
