@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    raise "happy holidays!"
+    holiday = FestiveErrors.current_theme&.to_s&.capitalize || "Holidays"
+    raise "Happy #{holiday}!"
   end
 end

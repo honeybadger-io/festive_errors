@@ -17,13 +17,40 @@ module FestiveErrors
     }
   end
 
+  def self.current_theme
+    today = Date.today
+    year = today.year
+
+    # Get holiday ranges for current year
+    ranges = FestiveErrors.holiday_ranges(year)
+
+    # Check if today falls within a holiday range
+    ranges.each do |theme, date_range|
+      if date_range.cover?(today)
+        return theme
+      end
+    end
+
+    # Also check ranges from previous year (for dates that span multiple years)
+    if today.month == 1
+      prev_ranges = FestiveErrors.holiday_ranges(year - 1)
+      prev_ranges.each do |theme, date_range|
+        if date_range.cover?(today)
+          return theme
+        end
+      end
+    end
+
+    nil # No theme if not within a holiday range
+  end
+
   module DebugExceptionsExtension
     private
 
     def create_template(*)
       template = super
 
-      return template unless (theme_file = THEMES[__festive_errors_current_theme])
+      return template unless (theme_file = THEMES[FestiveErrors.current_theme])
 
       css_path = File.expand_path("../styles/#{theme_file}", __dir__)
       css_content = File.read(css_path)
@@ -33,33 +60,6 @@ module FestiveErrors
       end
 
       template
-    end
-
-    def __festive_errors_current_theme
-      today = Date.today
-      year = today.year
-
-      # Get holiday ranges for current year
-      ranges = FestiveErrors.holiday_ranges(year)
-
-      # Check if today falls within a holiday range
-      ranges.each do |theme, date_range|
-        if date_range.cover?(today)
-          return theme
-        end
-      end
-
-      # Also check ranges from previous year (for dates that span multiple years)
-      if today.month == 1
-        prev_ranges = FestiveErrors.holiday_ranges(year - 1)
-        prev_ranges.each do |theme, date_range|
-          if date_range.cover?(today)
-            return theme
-          end
-        end
-      end
-
-      nil # No theme if not within a holiday range
     end
   end
 end
