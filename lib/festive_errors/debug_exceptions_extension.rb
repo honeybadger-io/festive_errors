@@ -13,7 +13,7 @@ module FestiveErrors
       halloween: Date.new(year, 10, 1)..Date.new(year, 10, 31),
       valentines: valentines_range(year),
       thanksgiving: Date.new(year, 11, 1)..Date.new(year, 11, 30),
-      newyears: Date.new(year, 12, 31)..Date.new(year+1, 1, 1),
+      newyears: Date.new(year, 12, 31)..Date.new(year + 1, 1, 1)
     }
   end
 
@@ -30,7 +30,7 @@ module FestiveErrors
     def create_template(*)
       template = super
 
-      return template unless theme_file = THEMES[__festive_errors_current_theme]
+      return template unless (theme_file = THEMES[__festive_errors_current_theme])
 
       css_path = File.expand_path("../styles/#{theme_file}", __dir__)
       css_content = File.read(css_path)
