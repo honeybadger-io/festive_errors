@@ -2,6 +2,9 @@
 
 Festive Errors is a Rails gem that spices up the Rails error page with fun holiday themes. We all like to do a little coding around the holidays. Get into the holiday spirit with Festive Errors!
 
+![A screenshot of the Rails error page in a web browser that displays an exception that was raise. The error message reads "Happy Halloween!" and there is a ghost emoji in the page heading.](./festive_errors.png)
+<p align="center"><small><em>Debugging an exception in the month of October.</em></small></p>
+
 ## Usage
 
 The gem adds a CSS theme override to the Rails debug page when your app raises an error in development. All you need to do is install it.
