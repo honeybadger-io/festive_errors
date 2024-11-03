@@ -4,18 +4,32 @@ header h1::after {
 
 header {
   background: #f7a3db;
+  color: #930D66;
 }
 
 .exception-message .message,
 h2,
 a {
-  color: #f7a3db;
+  color: #D81396;
 }
 
 a:hover {
-  color: #ff75cd;
+  color: #56083c;
 }
 
 .line.active {
   background-color: #fe2eab;
+  color: #4A0733;
+}
+
+@media (prefers-color-scheme: dark) {
+  .exception-message .message,
+  h2,
+  a {
+    color: #F267C3;
+  }
+
+  a:hover {
+    color: #f585cf;
+  }
 }

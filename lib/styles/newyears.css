@@ -9,13 +9,26 @@ header {
 .exception-message .message,
 h2,
 a {
-  color: #d7b030;
+  color: #8A701B;
 }
 
 a:hover {
-  color: #03172f;
+  color: #372d0b;
 }
 
 .line.active {
   background-color: #d7b030;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .exception-message .message,
+  h2,
+  a {
+    color: #BA9724;
+  }
+
+  a:hover {
+    color: #DEBF56;
+  }
 }
