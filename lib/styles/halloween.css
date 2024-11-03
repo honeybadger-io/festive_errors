@@ -1,3 +1,21 @@
 header h1::after {
   content: " 👻";
 }
+
+header {
+  background: #f18405;
+}
+
+.exception-message .message,
+h2,
+a {
+  color: #f18405;
+}
+
+a:hover {
+  color: #e75704;
+}
+
+.line.active {
+  background-color: #f24f13;
+}

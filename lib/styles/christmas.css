@@ -1,3 +1,21 @@
 header h1::after {
   content: " 🎅";
 }
+
+header {
+  background: #034f1b;
+}
+
+.exception-message .message,
+h2,
+a {
+  color: #034f1b;
+}
+
+a:hover {
+  color: #56705b;
+}
+
+.line.active {
+  background-color: #9ab99e;
+}

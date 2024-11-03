@@ -1,3 +1,21 @@
 header h1::after {
   content: " 💗";
 }
+
+header {
+  background: #f7a3db;
+}
+
+.exception-message .message,
+h2,
+a {
+  color: #f7a3db;
+}
+
+a:hover {
+  color: #ff75cd;
+}
+
+.line.active {
+  background-color: #fe2eab;
+}
