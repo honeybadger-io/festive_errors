@@ -1,5 +1,7 @@
 # Festive Errors
 
+[![Gem Version](https://badge.fury.io/rb/festive_errors.svg)](https://badge.fury.io/rb/festive_errors)
+
 Festive Errors is a Rails gem that spices up the Rails error page with fun holiday themes. We all like to do a little coding around the holidays. Get into the holiday spirit with Festive Errors!
 
 ![A screenshot of the Rails error page in a web browser that displays an exception that was raise. The error message reads "Happy Halloween!" and there is a ghost emoji in the page heading.](./festive_errors.png)
