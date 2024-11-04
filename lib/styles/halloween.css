@@ -1,35 +1,16 @@
-header h1::after {
-  content: " 👻";
-}
-
-header {
-  background: #f18405;
-  color: #552E02;
-}
-
-.exception-message .message,
-h2,
-a {
-  color: #AE5F04;
-}
-
-a:hover {
-  color: #462602;
-}
-
-.line.active {
-  background-color: #f24f13;
-  color: #212121;
+:root {
+  --festive-errors-emoji: " 👻";
+  --festive-errors-header-background: #f18405;
+  --festive-errors-header-color: #552e02;
+  --festive-errors-message-color: #ae5f04;
+  --festive-errors-link-hover-color: #462602;
+  --festive-errors-active-line-background: #f24f13;
+  --festive-errors-active-line-color: #212121;
 }
 
 @media (prefers-color-scheme: dark) {
-  .exception-message .message,
-  h2,
-  a {
-    color: #CE7005;
-  }
-
-  a:hover {
-    color: #f98f15;
+  :root {
+    --festive-errors-message-color: #ce7005;
+    --festive-errors-link-hover-color: #f98f15;
   }
 }

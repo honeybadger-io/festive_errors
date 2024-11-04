@@ -1,34 +1,15 @@
-header h1::after {
-  content: " 🎅";
-}
-
-header {
-  background: #034f1b;
-}
-
-.exception-message .message,
-h2,
-a {
-  color: #56705b;
-}
-
-a:hover {
-  color: #034f1b;
-}
-
-.line.active {
-  background-color: #9ab99e;
-  color: #444444;
+:root {
+  --festive-errors-emoji: " 🎅";
+  --festive-errors-header-background: #034f1b;
+  --festive-errors-message-color: #56705b;
+  --festive-errors-link-hover-color: #034f1b;
+  --festive-errors-active-line-background: #9ab99e;
+  --festive-errors-active-line-color: #444444;
 }
 
 @media (prefers-color-scheme: dark) {
-  .exception-message .message,
-  h2,
-  a {
-    color: #07B33D;
-  }
-
-  a:hover {
-    color: #09f152;
+  :root {
+    --festive-errors-message-color: #07b33d;
+    --festive-errors-link-hover-color: #09f152;
   }
 }

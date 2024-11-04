@@ -52,11 +52,13 @@ module FestiveErrors
 
       return template unless (theme_file = THEMES[FestiveErrors.current_theme])
 
-      css_path = File.expand_path("../styles/#{theme_file}", __dir__)
+      css_path = File.expand_path("../styles/style.css", __dir__)
       css_content = File.read(css_path)
+      theme_css_path = File.expand_path("../styles/#{theme_file}", __dir__)
+      theme_css_content = File.read(theme_css_path)
 
       template.content_for :style do
-        css_content.html_safe
+        theme_css_content.html_safe + css_content.html_safe
       end
 
       template
