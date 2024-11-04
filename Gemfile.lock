@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    festive_errors (0.0.1)
+    festive_errors (0.0.2)
       rails (>= 7.0.0)
 
 GEM
