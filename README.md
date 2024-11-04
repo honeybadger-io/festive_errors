@@ -19,6 +19,10 @@ Add the gem to your Gemfile:
 bundle add festive_errors --group development
 ```
 
+## Accessibility
+
+All themes use [AA compliant colors](https://accessible-colors.com/).
+
 ## Contributing
 
 This is a new gem. The themes and holidays are limited, and it needs tests. Contributions are welcome!
