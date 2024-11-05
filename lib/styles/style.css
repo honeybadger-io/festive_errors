@@ -1,0 +1,30 @@
+:root {
+  --festive-error-header-color-default: #f0f0f0;
+}
+
+header h1::after {
+  content: var(--festive-errors-emoji);
+}
+
+header {
+  background-color: var(--festive-errors-header-background);
+  color: var(
+    --festive-errors-header-color,
+    var(--festive-error-header-color-default)
+  );
+}
+
+.exception-message .message,
+h2,
+a {
+  color: var(--festive-errors-message-color);
+}
+
+a:hover {
+  color: var(--festive-errors-link-hover-color);
+}
+
+.line.active {
+  background-color: var(--festive-errors-active-line-background);
+  color: var(--festive-errors-active-line-color);
+}

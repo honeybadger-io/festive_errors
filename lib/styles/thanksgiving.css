@@ -1,34 +1,15 @@
-header h1::after {
-  content: " 🦃";
-}
-
-header {
-  background: #5a391e;
-}
-
-.exception-message .message,
-h2,
-a {
-  color: #744D27;
-}
-
-a:hover {
-  color: #2e1f10;
-}
-
-.line.active {
-  background-color: #b78c55;
-  color: #2D2D2D;
+:root {
+  --festive-errors-emoji: " 🦃";
+  --festive-errors-header-background: #5a391e;
+  --festive-errors-message-color: #744d27;
+  --festive-errors-link-hover-color: #2e1f10;
+  --festive-errors-active-line-background: #b78c55;
+  --festive-errors-active-line-color: #2d2d2d;
 }
 
 @media (prefers-color-scheme: dark) {
-  .exception-message .message,
-  h2,
-  a {
-    color: #C98E5D;
-  }
-
-  a:hover {
-    color: #DFBA9D;
+  :root {
+    --festive-errors-message-color: #c98e5d;
+    --festive-errors-link-hover-color: #dfba9d;
   }
 }
